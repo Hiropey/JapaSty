@@ -1,0 +1,45 @@
+@import "./reset";
+@import "./user";
+
+.main {
+  .main__map {
+    height: calc(100vh - 100px);
+    width: 100vw;
+    background-image: url(worldmap.png);
+    background-size: cover;
+  }
+}
+
+footer {
+
+  .main-menu {
+    width: 100vw;
+    height: 100px;
+    background-color: olive;
+    position: absolute;
+    bottom: 0;
+
+    .main-menu__list {
+      width: 960px;
+      margin: 0 auto;
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      
+
+      .main-menu__list-item {
+        font-size: 24px;
+        border: 2px solid lightseagreen;
+        background-color: darkolivegreen;
+        color: white;
+        
+        .main-menu__list-item__content {
+          text-align: center;
+          margin-bottom: 20px;
+          border: 2px;
+          
+        }
+      }
+    }
+  }
+}
