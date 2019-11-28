@@ -1,0 +1,11 @@
+
+.main-content {
+  float: left;
+  width: 640px;
+  margin-left: 300px;
+  z-index: 1;
+  .container {
+    background-color: rgba(0,128,0,0.7);
+    width: 100%;
+  }
+}

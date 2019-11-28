@@ -1,49 +1,74 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Travelungo</title>
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-    <%= csrf_meta_tags %>
-  </head>
+<head>
+  <title>Travelungo</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
 
-  <body>
-    <div class="main">
-      <div class="main__map">
-        
-            
-      </div>
-    
-    </div>
+<body class=body>
 
-    <%= yield %>
+  <div class="main">
 
     <footer>
       <div class="main-menu">
-        <div class="header__bar row">
-        <h1 class="grid-6"><a href="/">Travelungo</a></h1>
+        
+        <ul class="main-menu__list">
+          <li class="main-menu__list-item">
+            <div class="main-menu__list-item__content">
+              <h1 class="logo"><a href="/">Travelungo</a></h1>
+            </div>
+          </li>
+          <li class="main-menu__list-item">
+            <div class="main-menu__list-item__content">
+              <%= link_to "投稿一覧", posts_path, class: 'post' %>
+            </div>
+          </li>
+
         <% if user_signed_in? %>
-          <div class="user_nav grid-6">
-            <span><%= current_user.name %>
-              <ul class="user__info">
-                <li>
-                  <%= link_to "マイページ", "/users/#{current_user.id}" %>
-                  <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-                </li>
-              </ul>
+
+          <li class="main-menu__list-item">
+            <div class="main-menu__list-item__content">
+            <span>
+              <%= link_to "マイページ", "/users/#{current_user.id}" %>
             </span>
-            <%= link_to  "投稿する", "/tweets/new", class: "post" %>
-          </div>
+            </div>
+          </li>
+          <li class="main-menu__list-item">
+            <div class="main-menu__list-item__content">
+              <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+            </div>
+          </li>
+          <li class="main-menu__list-item">
+            <div class="main-menu__list-item__content">
+              <%= link_to "新規投稿", new_post_path, class: "post" %>
+            </div>
+          </li>
+
         <% else %>
-          <div class="grid-6">
-            <%= link_to "ログイン", new_user_session_path, class: 'post' %>
-            <%= link_to "新規登録", new_user_registration_path, class: 'post' %>
-          </div>
+          
+          <li class="main-menu__list-item">
+            <div class="main-menu__list-item__content">
+              <%= link_to "ログイン", new_user_session_path, class: 'post' %>
+            </div>
+          </li>
+          <li class="main-menu__list-item">
+            <div class="main-menu__list-item__content">
+              <%= link_to "新規登録", new_user_registration_path, class: 'post' %>
+            </div>
+          </li>
+                  
         <% end %>
+            
+        </ul>
       </div>
-        <div class="">
-        Copyright 2019.
+
+      <div class="main-bottom">
+        <p>Copyright 2019.</p>
       </div>
     </footer>
-  </body>
+  </div>
+
+</body>
 </html>

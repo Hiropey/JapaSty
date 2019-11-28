@@ -10,7 +10,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191122085244) do
+ActiveRecord::Schema.define(version: 20191125110243) do
+
+  create_table "countries", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "country",    null: false
+    t.integer  "region_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["region_id"], name: "index_countries_on_region_id", using: :btree
+  end
+
+  create_table "posts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.text     "detailed_place",     limit: 65535
+    t.string   "visit_date",                       null: false
+    t.string   "visit_cost",                       null: false
+    t.string   "visit_length",                     null: false
+    t.integer  "total_rate",                       null: false
+    t.integer  "food_rate"
+    t.integer  "hotel_rate"
+    t.integer  "entertainment_rate"
+    t.integer  "sightseeing_rate"
+    t.integer  "language"
+    t.text     "content",            limit: 65535
+    t.integer  "country_id"
+    t.integer  "user_id"
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.index ["country_id"], name: "index_posts_on_country_id", using: :btree
+    t.index ["user_id"], name: "index_posts_on_user_id", using: :btree
+  end
+
+  create_table "regions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "region",     null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name",                                              null: false
@@ -30,4 +64,7 @@ ActiveRecord::Schema.define(version: 20191122085244) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "countries", "regions"
+  add_foreign_key "posts", "countries"
+  add_foreign_key "posts", "users"
 end
