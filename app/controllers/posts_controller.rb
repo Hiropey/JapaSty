@@ -14,7 +14,9 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:title, :content)
+    params.require(:post).permit( :detailed_place, :visit_date, :visit_cost, :visit_length, 
+                                  :total_rate, :food_rate, :hotel_rate, :entertainment_rate, 
+                                  :sightseeing_rate, :language, :content )
   end
 
 end

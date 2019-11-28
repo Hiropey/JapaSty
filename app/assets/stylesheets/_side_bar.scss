@@ -1,0 +1,17 @@
+
+
+.sidebar {
+  height: calc(100vh - 100px);
+  width: 300px;
+  background-color: blue;
+  float: left;
+  opacity: 1;
+  z-index: 10;
+  position: absolute;
+  .sidebar-header {
+    height: 200px;
+    width: 100%;
+    background-color: gray;
+
+  }
+}

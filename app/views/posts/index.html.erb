@@ -1,21 +1,27 @@
-<div class="contents row">
-  <% @posts.each do |tweet| %>
-    <% @posts.each do |post| %>
-  <div class="content">
-    <div class="content__left">
-      <div class="content__left--image"></div>
-    </div>
-    <div class="content__right">
-      <div class="content__right__top">
-        <%= post.title %>
+<html>
+<body>
+  <div class="main__contents">
+    <div class="main__contents-posts">
+      <div class="main__contents-posts__post">
+      <% @posts.each do |post| %>
+        <%= render partial: "post", collection: @posts %>
+      <% end%>
+          <div class="content__right">
+            <%# <%= post.total_rate.to_s %>
+          </div>
+          <div class="content__right">
+            <%# <%= post.content %>
+          </div>
+          <div class="content__right">
+            <%# <%= post.created_at %>
+          </div>
       </div>
-      <div class="content__right__bottom">
-        <div class="content__right__bottom--date">
-          <%= post.created_at %>
-        </div>
-      </div>
     </div>
+
   </div>
-<% end %>
-  <% end %>
+
+  <%= render partial: "shared/footer_menu" %>
 </div>
+<%= render partial: "shared/side_bar" %>
+</body>
+</html>

@@ -1,9 +1,55 @@
-<div class="content__title">
-  新規記事の作成
+<%= render partial: "shared/side_bar" %>
+<%= render partial: "shared/footer_menu" %>
+
+<div class="main">
+  <div class="main-content">
+    <h1>新規記事の作成</h1>
+    <div class="container">
+    <%= form_for @post do |form| %>
+      <h3>
+        投稿する
+      </h3>
+      <div class="image-area">
+      <%= fa_icon("image 4x") %>
+      </div>
+      <div class="image-area">
+      <%= fa_icon("image 4x") %>
+      </div>
+      <div class="image-area">
+      <%= fa_icon("image 4x") %>
+      </div>
+      <%= form.text_field :detailed_place, placeholder: "詳細な場所" %><br>
+      <%= form.text_field :visit_date, placeholder: "訪れた時期" %><br>
+      <%= form.text_field :visit_cost, placeholder: "かかった費用" %><br>
+      <%= form.text_field :visit_length, placeholder: "滞在日数" %><br>
+      <div class="form-group row" id="star">
+      <%= form.label :rate,'評価 ', class:'col-md-3 col-form-label' %>
+      <%= form.hidden_field :total_rate, id: :review_star %>
+      </div>
+      <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.raty.js"></script>
+    <script>
+      $(function(){
+        $('#star4').raty({
+  half: true
+});
+    </script>
+ 
+      <%= form.text_field :total_rate, placeholder: "総合評価" %><br>
+      <%= form.text_field :food_rate, placeholder: "食事について" %><br>
+      <%= form.text_field :hotel_rate, placeholder: "宿泊について" %><br>
+      <%= form.text_field :entertainment_rate, placeholder: "エンターテインメント" %><br>
+      <%= form.text_field :sightseeing_rate, placeholder: "観光について" %><br>
+      <%= form.text_field :language, placeholder: "言葉について" %><br>
+      <%= form.text_area :content, placeholder: "text", rows: "10" %><br>
+      <%= form.submit "SEND" %>
+    <% end %>
+  </div>
+          <h3>
+            投稿する
+          </h3>
+      </div>
+    </div>
+  </div>
 </div>
 
-<%= form_with model: @post, class: :form, local: true do |form| %>
-  <%= form.text_field :title, placeholder: :タイトル, class: :form__title %>
-  <%= form.text_area :content, placeholder: :ブログ本文, class: :form__text %>
-  <%= form.submit '投稿する', class: :form__btn %>
-<% end %>
