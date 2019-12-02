@@ -3,53 +3,144 @@
 
 <div class="main">
   <div class="main-content">
-    <h1>新規記事の作成</h1>
+    
     <div class="container">
     <%= form_for @post do |form| %>
-      <h3>
-        投稿する
-      </h3>
-      <div class="image-area">
-      <%= fa_icon("image 4x") %>
-      </div>
-      <div class="image-area">
-      <%= fa_icon("image 4x") %>
-      </div>
-      <div class="image-area">
-      <%= fa_icon("image 4x") %>
-      </div>
-      <%= form.text_field :detailed_place, placeholder: "詳細な場所" %><br>
-      <%= form.text_field :visit_date, placeholder: "訪れた時期" %><br>
-      <%= form.text_field :visit_cost, placeholder: "かかった費用" %><br>
-      <%= form.text_field :visit_length, placeholder: "滞在日数" %><br>
-      <div class="form-group row" id="star">
-      <%= form.label :rate,'評価 ', class:'col-md-3 col-form-label' %>
-      <%= form.hidden_field :total_rate, id: :review_star %>
-      </div>
-      <script src="/js/jquery.min.js"></script>
-    <script src="/js/jquery.raty.js"></script>
-    <script>
-      $(function(){
-        $('#star4').raty({
-  half: true
-});
-    </script>
- 
-      <%= form.text_field :total_rate, placeholder: "総合評価" %><br>
-      <%= form.text_field :food_rate, placeholder: "食事について" %><br>
-      <%= form.text_field :hotel_rate, placeholder: "宿泊について" %><br>
-      <%= form.text_field :entertainment_rate, placeholder: "エンターテインメント" %><br>
-      <%= form.text_field :sightseeing_rate, placeholder: "観光について" %><br>
+      <h1>新規投稿</h1>
+      <p>
+      <select name="example">
+      <option value="選択肢1">アジア</option>
+      <option value="選択肢2">オセアニア</option>
+      <option value="選択肢3">ハワイ・太平洋諸島</option>
+      <option value="選択肢4">北米</option>
+      <option value="選択肢5">中南米</option>
+      <option value="選択肢6">ヨーロッパ</option>
+      <option value="選択肢7">中東</option>
+      <option value="選択肢8">アフリカ</option>
+      </select>
+      </p>
+      <%= form.text_field :country, placeholder: "詳細な場所" %><br>
+      <%= form.select :visit_date, ['2010'], prompt: '' %><br>
+      <%= form.select :visit_cost, ['3万円未満', '3~5万円', '5~7万円', '7~10万円', '10~15万円', '15~20万円', '20~25万円', '25~30万円', '30~40万円', '40~50万円', '50万円以上'], prompt: '選択してください' %><br>
+      <%= form.select :visit_length, ['1日未満', '1~3日', '3~5日', '5日~7日', '7~10日', '10~15日', '15~20日', '20日以上'], prompt: '選択してください' %><br>
       <%= form.text_field :language, placeholder: "言葉について" %><br>
-      <%= form.text_area :content, placeholder: "text", rows: "10" %><br>
+      <div class="images">
+      <label class="image-area" for="post_image">
+        <%= fa_icon("image 4x") %>
+        <input class="hidden" type="file" name="message[image]" id="post_image">
+      </label>
+      </div>
+      
+      <div class="total_rate">
+        <div class="field_title">
+          <p>総合点</p>
+        </div>
+        <div class="field" id="star1">
+         <%= form.hidden_field :total_rate, class: "form-control"  %><br>
+        </div>
+        <script>
+        $('#star1').raty({
+          size     : 36,
+          starOff:  '<%= asset_path('star-off.png') %>',
+          starOn : '<%= asset_path('star-on.png') %>',
+          starHalf: '<%= asset_path('star-half.png') %>',
+          scoreName: 'post[total_rate]',
+          half: true,
+        });
+        </script>
+      </div>
+        
+      <div class="food_rate">
+        <div class="field_title">
+          <p>食事の良さ</p>
+        </div>
+        <div class="field" id="star2">
+        <%= form.hidden_field :food_rate, class: "form-control"  %><br>
+        </div>
+        <script>
+        $('#star2').raty({
+          size     : 36,
+          starOff:  '<%= asset_path('star-off.png') %>',
+          starOn : '<%= asset_path('star-on.png') %>',
+          starHalf: '<%= asset_path('star-half.png') %>',
+          scoreName: 'post[food_rate]',
+          half: true,
+        });
+        </script>
+      </div>
+
+        <div class="hotel_rate">
+          <div class="field_title">
+            <p>宿泊の良さ</p>
+          </div>
+          <div class="field" id="star3">
+          <%= form.hidden_field :hotel_rate, class: "form-control"  %><br>
+          </div>
+          <script>
+          $('#star3').raty({
+            size     : 36,
+            starOff:  '<%= asset_path('star-off.png') %>',
+            starOn : '<%= asset_path('star-on.png') %>',
+            starHalf: '<%= asset_path('star-half.png') %>',
+            scoreName: 'post[hotel_rate]',
+            half: true,
+          });
+          </script>
+        </div>
+
+        <div class="entertainment_rate">
+        <div class="field_title">
+          <p>エンターテインメント</p>
+        </div>
+        <div class="field" id="star4">
+         <%= form.hidden_field :entertainment_rate, class: "form-control"  %><br>
+        </div>
+        <script>
+        $('#star4').raty({
+          size     : 36,
+          starOff:  '<%= asset_path('star-off.png') %>',
+          starOn : '<%= asset_path('star-on.png') %>',
+          starHalf: '<%= asset_path('star-half.png') %>',
+          scoreName: 'post[entertainment_rate]',
+          half: true,
+        });
+        </script>
+
+        <div class="sightseeing_rate">
+        <div class="field_title">
+          <p>観光の良さ</p>
+        </div>
+        <div class="field" id="star5">
+         <%= form.hidden_field :sightseeing_rate, class: "form-control"  %><br>
+        </div>
+        <script>
+        $('#star5').raty({
+          size     : 36,
+          starOff:  '<%= asset_path('star-off.png') %>',
+          starOn : '<%= asset_path('star-on.png') %>',
+          starHalf: '<%= asset_path('star-half.png') %>',
+          scoreName: 'post[sightseeing_rate]',
+          half: true,
+        });
+        </script>
+
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/jquery.raty.js"></script>
+        
+        
+ 
+      </div>
+      
+      <%= form.text_area :content, placeholder: "text", size: "60x5" %><br>
       <%= form.submit "SEND" %>
     <% end %>
   </div>
-          <h3>
-            投稿する
-          </h3>
       </div>
     </div>
   </div>
 </div>
 
+
+
+<%#= form.label :star %>
+            <%#= form.hidden_field :star, id: :review_star %>

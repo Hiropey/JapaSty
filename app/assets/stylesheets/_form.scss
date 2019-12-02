@@ -6,6 +6,116 @@
   z-index: 1;
   .container {
     background-color: rgba(0,128,0,0.7);
-    width: 100%;
+    overflow-y: scroll;
+    height: calc(100vh - 100px);
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      font-weight: bold;
+    }
+    .images {
+      display: flex;
+      width: 600px;
+      scroll-behavior: auto;
+      .image-area {
+        height: 180px;
+        width: 180px;
+        background-color: rgba(0, 63, 0, 0.8);
+        border: inset 2px black;
+        .hidden {
+          display: none;
+        }
+      }
+    }
+    .total_rate {
+      height: 64px;
+      width: 640px;
+      margin-bottom: 4px;
+      .field_title {
+        width: 300px;
+        font-size: 20px;
+        
+        p {
+          padding: 22px 40px 22px;
+        }
+      }
+      .field {
+        width: 320px;
+        height: 64px;
+        
+      }
+    }
+    .food_rate {
+      height: 64px;
+      width: 640px;
+      margin-bottom: 4px;
+      .field_title {
+        width: 320px;
+        font-size: 20px;
+        float: left;
+        p {
+          padding: 22px 40px 22px;
+        }
+      }
+      .field {
+        width: 320px;
+        height: 100%;
+        float: right;
+      }
+    }
+    .hotel_rate {
+      height: 64px;
+      width: 100%;
+      margin-bottom: 4px;
+      .field_title {
+        width: 50%;
+        font-size: 20px;
+        float: left;
+        p {
+          padding: 22px 40px 22px;
+        }
+      }
+      .field {
+        width: 50%;
+        height: 100%;
+        float: right;
+      }
+    }
+    .entertainment_rate {
+      height: 64px;
+      width: 100%;
+      margin-bottom: 4px;
+      .field_title {
+        width: 50%;
+        font-size: 20px;
+        float: left;
+        p {
+          padding: 22px 40px 22px;
+        }
+      }
+      .field {
+        width: 50%;
+        height: 100%;
+        float: right;
+      }
+    }
+    .sightseeing_rate {
+      height: 64px;
+      width: 640px;
+      margin-bottom: 4px;
+      .field_title {
+        width: 320px;
+        font-size: 20px;
+        float: left;
+        p {
+          padding: 22px 40px 22px;
+        }
+      }
+      .field {
+        width: 320px;
+        height: 100%;
+        float: right;
+      }
+    }
   }
 }

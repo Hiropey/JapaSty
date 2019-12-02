@@ -4,7 +4,7 @@ class CreateCountries < ActiveRecord::Migration[5.0]
       
       t.string     :country, null: false
       t.references :region, foreign_key: true
-      t.timestamps
+      
     end
   end
 end

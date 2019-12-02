@@ -4,11 +4,12 @@
   width: calc(100vw - 300px);
   z-index: 1;
   .main__contents-posts {
-    background-color: rgba(0,128,0,0.5);
-    height: 200px;
-    width: 800px;
+    
     
     .main__contents-posts__post {
+      background-color: rgba(0,128,0,0.5);
+      height: 200px;
+      width: 800px;
       font-size: 18px;
       font-weight: bold;
       opacity: 1;

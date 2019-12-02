@@ -21,16 +21,17 @@ ActiveRecord::Schema.define(version: 20191125110243) do
   end
 
   create_table "posts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "climate"
     t.text     "detailed_place",     limit: 65535
     t.string   "visit_date",                       null: false
     t.string   "visit_cost",                       null: false
     t.string   "visit_length",                     null: false
-    t.integer  "total_rate",                       null: false
-    t.integer  "food_rate"
-    t.integer  "hotel_rate"
-    t.integer  "entertainment_rate"
-    t.integer  "sightseeing_rate"
-    t.integer  "language"
+    t.float    "total_rate",         limit: 24,    null: false
+    t.float    "food_rate",          limit: 24
+    t.float    "hotel_rate",         limit: 24
+    t.float    "entertainment_rate", limit: 24
+    t.float    "sightseeing_rate",   limit: 24
+    t.float    "language",           limit: 24
     t.text     "content",            limit: 65535
     t.integer  "country_id"
     t.integer  "user_id"
