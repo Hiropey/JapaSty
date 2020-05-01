@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191125110243) do
+ActiveRecord::Schema.define(version: 20191202083844) do
 
   create_table "countries", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "country",    null: false
@@ -18,6 +18,14 @@ ActiveRecord::Schema.define(version: 20191125110243) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["region_id"], name: "index_countries_on_region_id", using: :btree
+  end
+
+  create_table "images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "image"
+    t.integer  "post_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["post_id"], name: "index_images_on_post_id", using: :btree
   end
 
   create_table "posts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -66,6 +74,7 @@ ActiveRecord::Schema.define(version: 20191125110243) do
   end
 
   add_foreign_key "countries", "regions"
+  add_foreign_key "images", "posts"
   add_foreign_key "posts", "countries"
   add_foreign_key "posts", "users"
 end
