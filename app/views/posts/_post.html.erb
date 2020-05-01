@@ -1,23 +1,24 @@
-<div class="main__contents-posts">
-  <div class="main__contents-posts__post">
-      <div class="main__contents-posts__post-rate">
-        <h1><%= post.detailed_place %></h1><br>
-        <%= post.total_rate.to_s %>
-      </div>
-      <div class="main__contents-posts__post-date">
-        <%= post.visit_date %>
-      </div>
-      <div class="main__contents-posts__post-length">
-        <%= post.visit_length %>
-      </div>
-      <div class="main__contents-posts__post-cost">
-        <%= post.visit_cost %>
-      </div>
-      <div class="main__contents-posts__post-maintext">
-        <%= post.content %>
-      </div>
-      <div class="main__contents-posts__post-created_at">
-        <%= post.created_at %>
-      </div>
-  </div>
+
+<div class="main__contents-posts__post">
+    <div class="main__contents-posts__post-rate">
+    <a href="/users/<%= @post.user.id %>">
+        <span><%= @post.user.name %></span>
+      <h1><%= post.detailed_place %></h1><br>
+      <%= post.total_rate.to_s %>
+    </div>
+    <div class="main__contents-posts__post-date">
+      <%= post.visit_date %>
+    </div>
+    <div class="main__contents-posts__post-length">
+      <%= post.visit_length %>
+    </div>
+    <div class="main__contents-posts__post-cost">
+      <%= post.visit_cost %>
+    </div>
+    <div class="main__contents-posts__post-maintext">
+      <%= post.content %>
+    </div>
+    <div class="main__contents-posts__post-created_at">
+      <%= post.created_at %>
+    </div>
 </div>

@@ -19,7 +19,6 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
       t.string   :next_trip
       t.text     :self_introduction
 
-
       t.timestamps null: false
     end
 

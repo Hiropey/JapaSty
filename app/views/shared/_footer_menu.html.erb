@@ -20,7 +20,9 @@
       <li class="main-menu__list-item">
         <div class="main-menu__list-item__content">
         <span>
-          <%= link_to "マイページ", "/users/#{current_user.id}" %>
+          <%#= link_to "マイページ", "/users/#{current_user.id}" %>
+          <%#= link_to "マイページ", current_user.name, user_path(current_user) %>
+          <%= link_to "マイページ", user_path(current_user) %>
         </span>
         </div>
       </li>

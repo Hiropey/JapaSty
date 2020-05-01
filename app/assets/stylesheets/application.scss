@@ -27,7 +27,7 @@ footer {
   .main-menu {
     width: 100vw;
     height: 100px;
-    background-color: olive;
+    background-color: rgb(7, 53, 26);
     position: absolute;
     bottom: 0;
     .main-menu__list {
@@ -38,7 +38,6 @@ footer {
       justify-content: space-between;
       .main-menu__list-item {
         font-size: 24px;
-        border: 2px solid black;
         background-color: darkolivegreen;
         height: 58px;
         .main-menu__list-item__content {
