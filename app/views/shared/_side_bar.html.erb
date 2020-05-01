@@ -1,8 +1,5 @@
 <div class="sidebar">
-  <div class="sidebar-header">
-
-
-  </div>
+<% %>
   <div class="sidebar-main">
     <div class="page-wrapper chiller-theme toggled">
   <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
@@ -11,9 +8,8 @@
   <nav id="sidebar" class="sidebar-wrapper">
     <div class="sidebar-content">
       <div class="sidebar-brand">
-        <a href="#">pro sidebar</a>
+        <%= link_to "traveller menu", root_path %>
         <div id="close-sidebar">
-          <i class="fas fa-times"></i>
         </div>
       </div>
       <div class="sidebar-header">
@@ -21,13 +17,17 @@
           <img class="img-responsive img-rounded" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg" alt="User picture">
         </div>
         <div class="user-info">
-          <span class="user-name">Jhon
-            <strong>Smith</strong>
+          <span class="user-name">
+            <strong><%= @user.name %></strong>
           </span>
-          <span class="user-role">Administrator</span>
+          
           <span class="user-status">
             <i class="fa fa-circle"></i>
-            <span>Online</span>
+            <span>Login</span>
+          </span>
+
+          <span class="user-points">
+            <p>旅偏差値 XX</p>
           </span>
         </div>
       </div>
@@ -48,7 +48,7 @@
       <div class="sidebar-menu">
         <ul>
           <li class="header-menu">
-            <span>General</span>
+            <span></span>
           </li>
           <li class="sidebar-dropdown">
             <a href="#">
@@ -158,25 +158,25 @@
             </div>
           </li>
           <li class="header-menu">
-            <span>Extra</span>
+            <span>新着メッセージ</span>
           </li>
           <li>
             <a href="#">
-              <i class="fa fa-book"></i>
-              <span>Documentation</span>
-              <span class="badge badge-pill badge-primary">Beta</span>
+              <%# <i class="fa fa-book"></i> %>
+              <span>ユーザー1</span>
+              <span class="badge badge-pill badge-primary"></span>
             </a>
           </li>
           <li>
             <a href="#">
-              <i class="fa fa-calendar"></i>
-              <span>Calendar</span>
+              <%# <i class="fa fa-calendar"></i> %>
+              <span>ユーザー2</span>
             </a>
           </li>
           <li>
             <a href="#">
-              <i class="fa fa-folder"></i>
-              <span>Examples</span>
+              <%# <i class="fa fa-folder"></i> %>
+              <span>ユーザー3</span>
             </a>
           </li>
         </ul>
@@ -185,25 +185,25 @@
     </div>
     <!-- sidebar-content  -->
     <div class="sidebar-footer">
-      <a href="#">
+      <%# <a href="#">
         <i class="fa fa-bell"></i>
         <span class="badge badge-pill badge-warning notification">3</span>
-      </a>
+      </a> %>
       <a href="#">
         <i class="fa fa-envelope"></i>
-        <span class="badge badge-pill badge-success notification">7</span>
+        <span class="badge badge-pill badge-success notification"></span>
       </a>
       <a href="#">
         <i class="fa fa-cog"></i>
-        <span class="badge-sonar"></span>
+        <%# <span class="badge-sonar"></span> %>
       </a>
       <a href="#">
-        <i class="fa fa-power-off"></i>
+        <i class="fa fa-star"></i>
       </a>
     </div>
   </nav>
   <!-- sidebar-wrapper  -->
-  <main class="page-content">
+  <%# <main class="page-content">
     <div class="container-fluid">
       <h2>Pro Sidebar</h2>
       <hr>
@@ -244,7 +244,7 @@
       </div>
     </div>
 
-  </main>
+  </main> %>
   <!-- page-content" -->
 </div>
 <!-- page-wrapper -->
