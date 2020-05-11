@@ -1,17 +1,21 @@
 # README
-Name
+##Name
 TRAVELUNGO (仮)
 
-Overview
+##Overview
+日本に滞在する旅行者あるいは日本に移住してきた外国人に対して、
+日本での生活をする上で有益な情報を提供する。
+またヘルプが必要な人とヘルプを提供できる人とを引き合わせるマッチングサービスも提供し、
+翻訳や日本語話者の同行をリクエストすることが容易にできる場を提供する。
 
-## Description
+# Description
 
 
-## Demo
+# Demo
 
-## VS. 
+# VS. 
 
-## Requirement
+# Requirement
 
 ## Usage
 
