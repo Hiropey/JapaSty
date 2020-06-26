@@ -1,70 +1,31 @@
-# TRAVELUNGO (仮)
+<div align="center"><img src="https://.png" width="400"/></div>
 
-# Overview
+# JaSty: Tips and Forums for Foreigners in Japan
+en
+*JaSty* is an Ruby on Rails platform of useful tips for life in Japan and online forums for matching those who need help and those who can help.
+It provides solutions for those who 
+The name of the application comes from "Japan + Stay"
 日本に滞在する旅行者あるいは日本に移住してきた外国人に対して、
 日本での生活をする上で有益な情報を提供する。
 またヘルプが必要な人とヘルプを提供できる人とを引き合わせるマッチングサービスも提供し、
 翻訳や日本語話者の同行をリクエストすることが容易にできる場を提供する。
 
-# Usage
+***Notice: Currently, JaSty is under development and may not be fully functional.**
 
-# Contribution
+## Contribution
+Any contributions to Chainer are welcome!
+If you want to file an issue or send a pull request, 
+
+
+## License
+Free of License.
+## More information
+- [Release notes]
+
+# Usage
 
 
 # Author
+Hiropey
 
 
-
-# DB設計
-## usersテーブル
-|Column|Type|Options|
-|------|----|-------|
-|email|string|null: false|
-|password|string|null: false|
-|name|string|null: false|
-|thumbnail_image|string| |
-|frequency|string| |
-|next_trip|string| |
-|self_introduction|text| |
-### Association
-- has_many :posts
-- has_many :comments
-
-## postsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|title|text|null: false|
-|text|text|null: false|
-|user_id|integer|null: false, foreign_key: true|
-### Association
-- belongs_to :user
-- has_many :comments
-- has_many :posts_tags
-- has_many  :tags,  through:  :posts_tags
-
-## tagsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|text|text|null: false|
-### Association
-- has_many :posts_tags
-- has_many  :posts,  through:  :posts_tags
-
-## posts_tagsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|post_id|integer|null: false, foreign_key: true|
-|tag_id|integer|null: false, foreign_key: true|
-### Association
-- belongs_to :post
-- belongs_to :tag
-
-## commentsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|text|text|null: false|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
-### Association
-- belongs_to :post
-- belongs_to :user
