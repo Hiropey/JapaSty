@@ -25,11 +25,12 @@ Registration
 - create your account and make your profile  
   
 Post  
-- if you have a trouble living in Japan, create your forum and you can ask for help 
-- if you're willing to help somebody, search a forum and you can post your tip  
+- if you have a trouble living in Japan, create your forum and you can ask for help  
+- if you need a travel guide in Japan, you can ask for it in the matching section  
+- if you're willing to help somebody, search a forum and you can post a comment  
   
 Read
-- Search for past archives of forums to find out the best infomations for your problem in Japan
+- Search for past archives of forums to find out the best solutions for the trouble you have in Japan
 
 ## Author
 Hiropey
