@@ -3,7 +3,6 @@
 # JapaSty: Tips and Forums for Foreigners in Japan
 *JapaSty* is an Ruby on Rails platform to exchange useful tips for life in Japan.  
 It provides online forums for matching those who in need for help and those who can help such as translating or sightseeing guides.  
-The name of the application comes from "Japan + Stay"  
   
 日本に滞在する旅行者あるいは日本に移住してきた外国人に対して、
 日本での生活をする上で有益な情報の交換の場を提供する。  
@@ -22,9 +21,9 @@ This is not a matching app for dating.
 Free License.
 
 ## Usage
-Registration  
+Registration
 - create your account and make your profile  
-Post 
+Post  
 - if you have a trouble living in Japan, create your forum and you can ask for help 
 - if you're willing to help somebody, search a forum and you can post your tip
 Read
