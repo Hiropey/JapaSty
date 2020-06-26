@@ -27,6 +27,7 @@ Registration
 Post  
 - if you have a trouble living in Japan, create your forum and you can ask for help 
 - if you're willing to help somebody, search a forum and you can post your tip  
+  
 Read
 - Search for past archives of forums to find out the best infomations for your problem in Japan
 
