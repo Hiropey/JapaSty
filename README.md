@@ -1,6 +1,6 @@
 <div align="center"><img src="https://.png" width="400"/></div>
 
-# JapaSty: Tips and Forums for Foreigners in Japan
+# JapaSty: Tips and Forums for Foreigners staying in Japan
 *JapaSty* is an Ruby on Rails platform to exchange useful tips for life in Japan.  
 It provides online forums for matching those who in need for help and those who can help such as translating or sightseeing guides.  
   
@@ -27,7 +27,7 @@ Registration
 Post  
 - if you have a trouble living in Japan, create your forum and you can ask for help  
 - if you need a travel guide in Japan, you can ask for it in the matching section  
-- if you're willing to help somebody, search a forum and you can post a comment  
+- if you're willing to help foeigners in Japan, search a forum and you can post a comment  
   
 Read
 - Search for past archives of forums to find out the best solutions for the trouble you have in Japan
