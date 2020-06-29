@@ -15,7 +15,7 @@ It provides online forums for matching those who in need for help and those who 
 - Rails 5.0.7
 
 ## Note
-This is not a matching app for dating.
+This is not a matching application.
 
 ## License
 Free License.
