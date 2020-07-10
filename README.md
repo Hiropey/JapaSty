@@ -11,6 +11,16 @@ It provides online forums for matching those who in need for help and those who 
 
 ***Notice: Currently, JapaSty is under development and may not be fully functional.**
 
+## Purpose of the development
+
+Quite a few of people visiting or staying in Japan are missing better experiences by having difficulties in communication, social service or lack of knowledge of Japanese culture. There're a lot of helper applications out there such as train navigation apps. However, these are usually for  In order to 
+
+日本を訪れる旅行者、あるいは在住している外国人の中には
+
+## Demo
+
+***Currently under development**
+
 ## Requirement
 - Rails 5.0.7
 
@@ -31,6 +41,10 @@ Post
   
 Read
 - Search for past archives of forums to find out the best solutions for the trouble you have in Japan
+
+## DB design
+
+
 
 ## Author
 Hiropey
