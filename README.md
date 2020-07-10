@@ -13,9 +13,9 @@ It provides online forums for matching those who in need for help and those who 
 
 ## Purpose of the development
 
-Quite a few of people visiting or staying in Japan are missing better experiences by having difficulties in communication, social service or lack of knowledge of Japanese culture. There're a lot of helper applications out there such as train navigation apps. However, these are usually for  In order to 
+Quite a few of people visiting or staying in Japan are missing better experiences by having difficulties in communication,　social services or lack of knowledge of Japanese culture. There're a lot of helper applications out there such as train navigation apps. However, these are usually for the convenience for singular purpose. 
 
-日本を訪れる旅行者、あるいは在住している外国人の中には
+日本を訪れる旅行者、あるいは在住している外国人の中にはコミュニケーションや文化や社会制度を知らないが故に、より良い滞在経験を逃してしまっている人が数多くいる。
 
 ## Demo
 
