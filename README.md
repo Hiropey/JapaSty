@@ -1,4 +1,3 @@
-<div align="center"><img src="https://.png" width="400"/></div>
 ![JapaSty](https://user-images.githubusercontent.com/57389017/87443778-e622ed80-c630-11ea-8dcd-18b68ab42691.png)
 
 # JapaSty: Tips and Forums for Foreigners staying in Japan
